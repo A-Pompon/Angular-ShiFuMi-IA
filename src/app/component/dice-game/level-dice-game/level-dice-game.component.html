@@ -1,0 +1,15 @@
+<div *ngIf='data.level'>
+    <p>Choix du niveau :</p>
+
+    <div>
+
+        <button (click)="sendEvent1(); displayGameBoardChild()">Level 1</button> 
+
+        <button (click)="sendEvent2(); displayGameBoardChild()">Level 2</button>
+
+        <button (click)="sendEvent3(); displayGameBoardChild()">Level 3</button>
+
+        <button routerLink='/'>Accueil</button>
+        
+    </div>
+</div>

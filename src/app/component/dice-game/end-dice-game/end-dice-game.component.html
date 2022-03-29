@@ -1,0 +1,19 @@
+<div *ngIf='data.show'>
+    <h3>Fin de partie !</h3>
+
+    <p>
+        Vous avez {{winOrLoos}} 
+    </p>
+
+    <p>
+        Le score final est : PLAYER {{scorePlayerFinal}} : {{scoreIaFinal}} : BOT
+    </p>
+
+    <div>
+    <button (click)="resetGame(); displayLevel()" class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+
+    <button (click)="resetAll()" routerLink='/'>Retour Accueil</button>
+    </div>
+
+</div>
+

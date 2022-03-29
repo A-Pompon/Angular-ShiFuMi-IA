@@ -1,0 +1,40 @@
+    <header>
+        <h1>SHI-FU-MI GAME</h1>
+    </header>
+    <main>
+
+        <div>
+
+            <app-shifumi-game-level (sendLevelOneToData)="scoreToEnd1()" (sendLevelTwoToData)="scoreToEnd2()" (sendLevelThreeToData)="scoreToEnd3()" ></app-shifumi-game-level>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </div>
+
+        <div class="gameBoard">
+
+            <button (click)="stoneCase()" class="button" id="pierre">
+                PIERRE
+            </button>
+                
+            <button (click)="paperCase()" class="button" id="papier">
+                PAPIER
+            </button>
+
+            <button (click)="scissorsCase()" class="button" id="ciseaux">
+                CISEAUX
+            </button>
+
+            <div class="affichage">
+                {{resultat}}
+            </div>
+
+            {{scoreToReach}}
+
+        </div>
+        
+
+    </main>

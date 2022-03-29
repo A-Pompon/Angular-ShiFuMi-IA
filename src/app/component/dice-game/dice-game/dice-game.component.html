@@ -1,0 +1,40 @@
+<h1>PIG GAME</h1>
+
+<div>
+    <app-level-dice-game></app-level-dice-game>
+</div>
+
+<div>
+    <div class="player-0-panel active">
+        <!--Player 1 should be replaced by name of player-->
+        <div class="player-name" id="name-0">You</div>
+        <div class="player-score" id="score-0"></div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-0"></div>
+        </div>
+    </div>
+    
+    <div class="player-1-panel">
+        <div class="player-name" id="name-1">Computer</div>
+        <div class="player-score" id="score-1"></div>
+        <div class="player-current-box">
+            <div class="player-current-label">Current</div>
+            <div class="player-current-score" id="current-1"></div>
+        </div>
+    </div>
+
+    <div>
+    <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+    <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+    </div>
+
+    <input type="text" placeholder="Final score" class="final-score">
+            
+    <img src="dice-5.png" alt="Dice" class="dice" id="dice-1" *ngIf='dice'>
+    <img src="src/assets/pig-game-picture/dice-5.png" alt="Dice" class="dice" id="dice-2">
+</div>
+
+<div>
+    <app-end-dice-game></app-end-dice-game>
+</div>

@@ -1,0 +1,38 @@
+<header>
+    <h1>SHI-FU-MI GAME</h1>
+</header>
+<main>
+
+    <div>
+        <app-test-shifumi-level (sendLevelOneToData)="scoreToEnd1()" (sendLevelTwoToData)="scoreToEnd2()" (sendLevelThreeToData)="scoreToEnd3()" (sendDisplayToData)="displayGameBoard()"></app-test-shifumi-level>
+    </div>
+
+    <div *ngIf='gameBoard'>
+
+        <button (click)="stoneCase()" class="button" id="pierre">
+            PIERRE
+        </button>
+            
+        <button (click)="paperCase()" class="button" id="papier">
+            PAPIER
+        </button>
+
+        <button (click)="scissorsCase()" class="button" id="ciseaux">
+            CISEAUX
+        </button>
+
+        <div class="affichage">
+            {{resultat}}
+        </div>
+
+        <p>PLAYER : {{scorePlayer}} | {{scoreIa}} : BOT </p>
+
+        <p>Score pour remporter la partie : {{scoreToReach}}</p>
+
+    </div>
+
+    <div>
+        <app-test-shifumi-end (sendResetToData)="resetStats()" [winOrLoos]="winLoos" [scoreIaFinal]='scoreIa' [scorePlayerFinal]='scorePlayer' ></app-test-shifumi-end>
+    </div>                                                      <!--[hidden]="show"-->
+
+</main>
